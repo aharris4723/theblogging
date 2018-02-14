@@ -8,3 +8,5 @@ public/css/.sass-cache/
 public/css/main.css.map
 
 Gemfile.lock
+
+.DS_Store
