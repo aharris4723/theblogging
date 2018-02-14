@@ -17,7 +17,7 @@ end
 
 post '/create_account' do
 	User.create(username: params[:username], password: params[:password])
-	redirect '/login'
+	redirect '/'
 end
 
 get '/feed' do
@@ -28,5 +28,9 @@ end
 get '/' do 
 	@blogs = Blog.all
 	erb :login	
+end
+
+post '/update_account'
+	User.update(username:)
 end
 
