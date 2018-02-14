@@ -6,6 +6,7 @@ set :sessions, true
 require './models'
 
 
+
 get '/' do
 	erb :login
 end
@@ -23,3 +24,9 @@ get '/feed' do
 	@blogs = Blog.all
 	erb :feed
 end
+
+get '/' do 
+	@blogs = Blog.all
+	erb :login	
+end
+
