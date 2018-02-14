@@ -31,6 +31,7 @@ get '/' do
 end
 
 post '/update_account'
-	User.update(username:)
+	User.update(username: params[:username], password params[:password])
+	redirect '/'
 end
 
