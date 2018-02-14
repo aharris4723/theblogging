@@ -1,0 +1,15 @@
+<% i = @blogs.length %>
+<% y = i-10 %>
+<% @blogs = @blogs.reverse %>
+<% while i > y && i >0 %>
+<% @blogs.each do |t| %>
+
+<div>
+	<h4><%= t.title %></h4>
+	<p><%= t.content %></p>
+</div>
+<% i -= 1 %>
+<% end %>
+
+
+<%end %>
