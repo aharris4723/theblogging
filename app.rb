@@ -25,6 +25,7 @@ end
 
 get '/users' do
 	erb :users
+end
 
 
 
@@ -49,9 +50,4 @@ end
 get '/' do
 	@blogs = Blog.all
 	erb :login
-
-end
-
-post '/update_account'
-	User.update(username:)
 end
