@@ -30,12 +30,12 @@ get '/' do
 	erb :login	
 end
 
-post '/update_account'
-	User.update(username: params[:username], password params[:password])
+post '/update_account' do
+	User.update(username: params[:username], password: params[:password])
 	redirect '/'
 end
 
-post 'delete_account'
+post 'delete_account' do
 	"heelo"
 	redirect '/'
 end
