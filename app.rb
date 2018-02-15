@@ -30,7 +30,7 @@ get '/' do
 	erb :login	
 end
 
-<<<<<<< HEAD
+
 
 get '/profile.erb' do 
 	@blogs = Blog.all
@@ -41,9 +41,9 @@ user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/'
 end
-=======
-post '/update_account'
-	User.update(username:)
-end
 
->>>>>>> master
+# post '/update_account'
+# 	User.update(username:)
+# end
+
+
