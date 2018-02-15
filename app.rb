@@ -55,9 +55,13 @@ post '/delete_account' do
 end
 
 get '/profile' do
+if session[:user_id]
 @user = User.find(session[:user_id])
 @blogs = @user.blogs
 erb :profile
+else
+	redirect '/'
+end
 end
 
 post "/create_blog" do
