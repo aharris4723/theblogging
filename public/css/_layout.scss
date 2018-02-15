@@ -1,4 +1,66 @@
 body{
-	background-color:red;
+	background-color:white;
 }
+
+
+
+#theblogging{
+	font-family: 'Butcherman', cursive;
+	font-size:40pt;
+	text-align:center;
+	box-shadow:3px 3px 3px 3px black;
+	color:red;
+
+}
+#navbars{
+	font-family: 'Butcherman', cursive;
+	font-size:16pt;
+	// box-shadow:5px 5px 5px 5px gray;
+}
+.layoutnavs{
+	display: inline;
+	margin: 10px auto;
+	box-shadow:5px 5px 5px 5px black;
+	padding: 20px;
+    justify-content: space-between;
+}
+    
+a:link {
+    color: black;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    text-align:center;
+    position:absolute;
+    top:20%;
+    // left:30%;
+    // box-shadow:5px 5px 5px 5px gray;
+}
+
+footer { 
+    display: block;
+}
+// #backgroundimg{
+// 	// background-image: url('richard-loader-31932.jpg');
+// 	height:400px;
+// 	width:400px;
+// 	text-align:center;
+// 	position:absolute;
+// 	border: 2px auto solid black;
+// 	background-color:black;
+// }
+
+#backgroundimg{
+	background-image: url('/richard-loader-31932.jpg');
+	height:400px;
+	width:400px;
+	text-align:center;
+	position:absolute;
+	border: 2px auto solid black;
+}
+
+
 
