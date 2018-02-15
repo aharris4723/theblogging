@@ -1,11 +1,19 @@
-<h2>Update Account info</h2>
-<form method="post" action="/update_account">
-	<input type="text" name="username">
-	<input type="text" name="password">
-	<input type="submit" name="" value="Update Account Information">
+
+
+<form class="settings_forms" method="post" action="/update_account">
+	<h2>Update Account info</h2>
+	username: <input type="text" name="username" placeholder="username to change to" class="settings_input"> <br>
+	password: <input type="text" name="password" placeholder="password to change to" class="settings_input"> <br>
+	<input type="submit" name="" value="Update Account Information" class="settings_input">
 </form>
 
-<h2>Delete Account</h2>
-<form method="post" action="/delete_account">
+<form class="settings_forms" method="post" action="/logout_account">
+	<h2 class="settings_header">Log Out</h2>
+	<input type="submit" name="" value="Logout">
+</form>
+
+<form class="settings_forms" method="post" action="/delete_account">
+	<h2 class="settings_header">Delete Account</h2>
 	<input type="submit" name="" value="Delete Account">	
 </form>
+

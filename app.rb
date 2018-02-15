@@ -47,18 +47,28 @@ post '/update_account' do
 	redirect '/'
 end
 
-post 'delete_account' do
-	"heelo"
+post '/delete_account' do
+	user = User.find(session[:user_id])
+	user.destroy
 	redirect '/'
 end
 
 get '/profile' do
 
-	@blogs = Blog.all
+@blogs = Blog.all
 erb :profile
 end
 post "/create_blog" do
 user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/'
+end
+
+get "/settings" do
+	erb :"users/settings"
+end	
+
+post "/logout_account" do
+	session[:user_id] = nil
+	redirect '/'
 end
