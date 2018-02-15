@@ -31,6 +31,8 @@ get '/' do
 end
 
 
+
+
 post '/update_account' do
 	User.update(username: params[:username], password: params[:password])
 	redirect '/'
@@ -40,6 +42,7 @@ post 'delete_account' do
 	"heelo"
 	redirect '/'
 end
+
 
 
 get '/profile.erb' do 
@@ -52,8 +55,16 @@ Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/'
 end
 
+
+# post '/update_account'
+# 	User.update(username:)
+# end
+
+
+
 post '/update_account'
 	User.update(username:)
 end
+
 
 
