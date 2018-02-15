@@ -35,3 +35,7 @@ post '/update_account'
 	redirect '/'
 end
 
+post 'delete_account'
+	"heelo"
+	redirect '/'
+end
