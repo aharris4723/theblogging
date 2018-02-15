@@ -69,11 +69,12 @@ end
 
 get "/settings" do
 	erb :"users/settings"
-end	
+end
 
 post "/logout_account" do
 	session[:user_id] = nil
 	redirect '/'
+end
 
 get '/users/:id' do
 	user = User.find(params[:id])
