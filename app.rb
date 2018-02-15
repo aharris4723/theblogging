@@ -6,12 +6,29 @@ set :sessions, true
 require './models'
 
 
-
 get '/' do
 	erb :login
 end
 
-get '/signup' do 
+post '/signin' do
+	@username = params[:username]
+	@password = params[:password]
+	if
+		user = User.where(username: @username, password: @password).first
+		session[:user_id] = user.id
+		redirect '/feed'
+	else
+		redirect '/'
+	end
+end
+
+get '/users' do
+	erb :users
+end
+
+
+
+get '/signup' do
 	erb :"users/signup"
 end
 
@@ -25,14 +42,6 @@ get '/feed' do
 	erb :feed
 end
 
-get '/' do 
-	@blogs = Blog.all
-	erb :login	
-end
-
-
-
-
 post '/update_account' do
 	User.update(username: params[:username], password: params[:password])
 	redirect '/'
@@ -43,28 +52,13 @@ post 'delete_account' do
 	redirect '/'
 end
 
+get '/profile' do
 
-
-get '/profile.erb' do 
 	@blogs = Blog.all
-erb :profile	
+erb :profile
 end
-post "/create_blog" do 
-user = User.find(session[:user_id])	
+post "/create_blog" do
+user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/'
 end
-
-
-# post '/update_account'
-# 	User.update(username:)
-# end
-
-
-
-post '/update_account'
-	User.update(username:)
-end
-
-
-
