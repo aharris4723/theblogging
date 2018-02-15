@@ -55,8 +55,8 @@ post '/delete_account' do
 end
 
 get '/profile' do
-
-@blogs = Blog.all
+@user = User.find(session[:user_id])
+@blogs = @user.blogs
 erb :profile
 end
 
