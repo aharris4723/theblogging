@@ -7,7 +7,6 @@ require './models'
 
 
 get '/' do
-
 	erb :login
 end
 
@@ -29,10 +28,6 @@ end
 
 
 
-get '/' do
-	erb :login
-end
-
 get '/signup' do
 	erb :"users/signup"
 end
@@ -47,17 +42,6 @@ get '/feed' do
 	erb :feed
 end
 
-get '/' do
-	@blogs = Blog.all
-	erb :login
-<<<<<<< HEAD
-end
-=======
-end
-
-
-
-
 post '/update_account' do
 	User.update(username: params[:username], password: params[:password])
 	redirect '/'
@@ -68,12 +52,7 @@ post 'delete_account' do
 	redirect '/'
 end
 
-
-
-
-
-get '/profile.erb' do
-
+get '/profile' do
 
 	@blogs = Blog.all
 erb :profile
@@ -83,4 +62,3 @@ user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/'
 end
->>>>>>> master
