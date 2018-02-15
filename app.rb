@@ -60,11 +60,3 @@ end
 # post '/update_account'
 # 	# User.update(username:)
 # end
-
-
-post '/update_account'
-	User.update(username:)
-end
-
-
->>>>>>> fb0cfb63de24d6b1bd41aff51b31d865d93fee10
