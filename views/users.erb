@@ -1,6 +1,11 @@
 <h2>All Users</h2>
 
+<div class="userblock">
 
-<% @users.each do |u| %>
-<a href='/users/<%u.id %>'><div><%= u.username %></div></a>
-<% end %>
+ <% @users.each do |u| %>
+
+   <a href='/users/<%= u.id %>'><div class="userlink"><%= u.username %></div></a>
+
+ <% end %>
+
+</div>
