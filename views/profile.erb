@@ -1,23 +1,21 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
 </head>
 
 <div id="head-style"><h1>MY PROFILE</h1></div>
 <div id="current-user"><h3>Current User</h3></div>
 
-
-<div id="main-wrapper">
-
-
+<div id="layoutnavs"><a href='/users/settings'>SETTINGS</a></div>
 
 <body id="profilebg">
 
-
+<div id="main-wrapper">
 <div id="create-blog"><h3>Create a blog</h3></div>
 
 <form action='/create_blog' method='post'>
 	<div><input type="text" name="title" placeholder='title'></div>
-	<div><input type="text" name="content" placeholder='content'></div>
+	<div id='blog'><input type="text" name="content" placeholder='content'></div>
 	<div><input type="submit" value="create blog"></div>
 
 </form>
