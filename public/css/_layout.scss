@@ -3,6 +3,7 @@ body{
 }
 
 
+
 #theblogging{
 	font-family: 'Butcherman', cursive;
 	font-size:40pt;
@@ -38,6 +39,7 @@ ul {
     // left:30%;
     // box-shadow:5px 5px 5px 5px gray;
 }
+
 footer { 
     display: block;
 }
@@ -50,3 +52,15 @@ footer {
 // 	border: 2px auto solid black;
 // 	background-color:black;
 // }
+
+#backgroundimg{
+	background-image: url('/richard-loader-31932.jpg');
+	height:400px;
+	width:400px;
+	text-align:center;
+	position:absolute;
+	border: 2px auto solid black;
+}
+
+
+
