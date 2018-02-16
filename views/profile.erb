@@ -1,3 +1,4 @@
+
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
@@ -28,6 +29,10 @@
 <div class="feed_blogs">
 	<h4><%= t.title %></h4>
 	<p><%= t.content %></p>
+	<form method="get" action="/<%= t.id %>/edit_blog"><input type="submit" name="" value="Edit">
+	</form>
+	<form method="post" action="/<%= t.id %>/delete_blog"><input type="submit" name="" value="Delete">
+	</form>
 </div>
 
 <% end %>
@@ -35,3 +40,5 @@
 </div>
 
 </body>
+
+
