@@ -9,7 +9,7 @@
 	color:red;
 	font-size:20pt;
 	text-shadow: 5px 5px black;
-	
+
 
 }
 
@@ -38,6 +38,9 @@
 .main-wrapper{
 	text-align:center;
 	position:absolute;
+	left: 0;
+  right: 0;
+  margin: auto;
 	top:-30px;
 	border:2px auto solid black;
 	left:30%;
@@ -59,9 +62,9 @@ input[type=submit] {
     cursor: pointer;
 
 
-  
 
-    
+
+
 
 
 }
@@ -96,5 +99,7 @@ input[type=password], select, textarea{
 	height:200px;
 	width:70%;
 	top:400px;
-	left:15%;
+	left: 0;
+  right: 0;
+  margin: auto;
 }
