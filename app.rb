@@ -67,12 +67,16 @@ end
 post "/create_blog" do
 user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
-redirect '/'
+redirect '/profile'
 end
 
 
 get "/settings" do
+	if session[:user_id]
 	erb :"users/settings"
+else
+	redirect '/'
+end
 end
 
 post "/logout_account" do
