@@ -50,6 +50,7 @@ end
 
 post '/delete_account' do
 	user = User.find(session[:user_id])
+	session[:user_id] = nil
 	user.destroy
 	redirect '/'
 end
@@ -64,11 +65,29 @@ else
 end
 end
 
+post "/:id/delete_blog" do 
+Blog.find(params[:id]).destroy
+	redirect "/profile" 
+end 
+
+get "/:id/edit_blog" do
+	@blogid = params[:id]
+erb :"users/editblog"
+
+end
+
+post '/:id/edited_blog' do
+	blog = params[:id]
+	Blog.find(blog).update(title: params[:title], content: params[:content])
+	redirect '/profile'
+end
+
 post "/create_blog" do
 user = User.find(session[:user_id])
 Blog.create(title: params[:title], content: params[:content], user_id: user.id)
 redirect '/profile'
 end
+
 
 
 get "/settings" do
