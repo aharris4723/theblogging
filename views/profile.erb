@@ -29,10 +29,12 @@
 <div class="feed_blogs">
 	<h4><%= t.title %></h4>
 	<p><%= t.content %></p>
+	<div id="editblogform">
 	<form method="get" action="/<%= t.id %>/edit_blog"><input type="submit" name="" value="Edit">
 	</form>
 	<form method="post" action="/<%= t.id %>/delete_blog"><input type="submit" name="" value="Delete">
 	</form>
+</div>
 </div>
 
 <% end %>
