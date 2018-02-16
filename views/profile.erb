@@ -16,13 +16,13 @@
 
 <form action='/create_blog' method='post'>
 	<div><input type="text" name="title" placeholder='title'></div>
-	<div id='blog'><input type="text" name="content" placeholder='content' height="200px"></div>
+	<div id='blog'><input type="text" name="content" placeholder='content'></div>
 	<div><input type="submit" value="create blog" ></div>
 
 </form>
 </div>
 
-<div id="feed_wrapper">
+<div id="profile_feed_wrapper">
 <% @blogs.each do |t| %>
 
 <div class="feed_blogs">
