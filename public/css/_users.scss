@@ -1,9 +1,29 @@
 .userblock{
   position: relative;
-  left: 50%;
-  margin-top: 7%;
+  left: 0;
+  right: 0;
+  margin: auto
 }
 .userlink{
-margin: 10px;
-
+  border: 2px solid;
+  display: inline-block;
+  margin: 10px auto;
+  width: 180px;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 5px 5px black;
+}
+#users_title{
+  box-shadow: 11px 9px 19px 2px black;
+  padding: 2%;
+  background-color: orange;
+  border-radius: 40%;
+  text-shadow: 3px 1px white;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 158px;
+  height: 26px;
+  margin-bottom: 7px;
 }
