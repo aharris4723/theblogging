@@ -1,13 +1,20 @@
-.settings_forms{
-	border: 2px solid red;
+.settings_form{
 	text-align:center;
-	margin:20px auto;
-	width: 400px;
-	padding-bottom: 10px;
-	font-family:'Kavivanar', cursive;
-	padding: 20px;
+	border:2px auto solid black;
+	background-color:white;
+	border-radius:40%;
+	height:200px;
+	width:300px;
+	box-shadow: 10px 10px 10px 10px grey;
+	padding:8%;
+	background-color:green;
+	display: inline-block;
+
 }
 
-.settings_input{
-	margin: 5px;
+.settings_name{
+	font-family: 'Luckiest Guy', cursive;
 }
+
+
+
