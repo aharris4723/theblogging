@@ -85,8 +85,8 @@ post "/logout_account" do
 end
 
 get '/users/:id' do
-	user = User.find(params[:id])
-	@blogs = user.blogs
+	@user = User.find(params[:id])
+	@blogs = @user.blogs
 	erb :"users/show"
 
 end
