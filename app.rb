@@ -34,10 +34,10 @@ get '/signup' do
 end
 
 post '/create_account' do
-	if User.where(username: params[:username]) === false
-	User.create(username: params[:username], password: params[:password])
+	if User.where(username: params[:username])
+	redirect '/'
 else
-	redirect '/signup'
+User.create(username: params[:username], password: params[:password])
 end
 end
 
@@ -47,7 +47,8 @@ get '/feed' do
 end
 
 post '/update_account' do
-	User.update(username: params[:username], password: params[:password])
+	user = User.find(session[:user_id])
+	user.update(username: params[:username], password: params[:password])
 	redirect '/'
 end
 
