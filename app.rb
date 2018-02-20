@@ -34,8 +34,11 @@ get '/signup' do
 end
 
 post '/create_account' do
+	if User.where(username: params[:username]) === false
 	User.create(username: params[:username], password: params[:password])
-	redirect '/'
+else
+	redirect '/signup'
+end
 end
 
 get '/feed' do
